@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>❤️ Pour Mon Amour ❤️</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -14,192 +17,421 @@
 }
 
 body{
+
     background:linear-gradient(135deg,#ff4d6d,#ff9a9e);
+
     min-height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     overflow:hidden;
+
 }
+
 
 .container{
+
+    width:90%;
+    max-width:800px;
+
     text-align:center;
+
     color:white;
+
 }
+
+
+/* PHOTOS */
 
 .photos{
+
     display:flex;
+
     justify-content:center;
-    gap:20px;
+
+    align-items:center;
+
+    gap:15px;
+
     margin-bottom:25px;
+
 }
+
 
 .photos img{
-    width:180px;
-    height:180px;
+
+    width:120px;
+
+    height:120px;
+
     object-fit:cover;
+
     border-radius:50%;
-    border:5px solid white;
-    box-shadow:0 0 20px rgba(255,255,255,.6);
+
+    border:4px solid white;
+
+    box-shadow:0 0 20px rgba(255,255,255,.8);
+
 }
+
+
+/* Carte */
 
 .card{
+
     background:rgba(255,255,255,.15);
+
     padding:35px;
-    border-radius:20px;
+
+    border-radius:25px;
+
     backdrop-filter:blur(10px);
+
+    box-shadow:0 0 30px rgba(0,0,0,.2);
+
 }
+
+
 
 h1{
-    margin-bottom:20px;
+
+    margin-bottom:25px;
+
+    font-size:30px;
+
 }
+
 
 button{
-    padding:15px 40px;
+
+    padding:15px 45px;
+
     font-size:20px;
+
     border:none;
+
     border-radius:50px;
+
     cursor:pointer;
+
     background:white;
+
     color:#ff2d55;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
+
 
 button:hover{
+
     transform:scale(1.1);
+
 }
+
+
+/* Cacher les étapes */
 
 #question2,#fin{
+
     display:none;
+
 }
+
+
+/* Coeurs */
 
 .heart{
+
     position:fixed;
-    font-size:25px;
+
+    top:-50px;
+
+    font-size:30px;
+
     animation:fall 4s linear forwards;
+
     pointer-events:none;
+
 }
 
+
 @keyframes fall{
+
     from{
+
         transform:translateY(-50px);
+
         opacity:1;
+
     }
+
+
     to{
+
         transform:translateY(110vh);
+
         opacity:0;
+
     }
+
 }
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+
+    .photos img{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+
+    .card{
+
+        padding:25px;
+
+    }
+
+
+    h1{
+
+        font-size:24px;
+
+    }
+
+
+    button{
+
+        font-size:17px;
+
+        padding:12px 35px;
+
+    }
+
+}
+
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <div class="container">
 
+
+<div class="photos">
+
 <img src="photo1.jpg" alt="Nous">
+
 <img src="photo2.jpg" alt="Nous">
+
+</div>
+
+
 
 <div class="card">
 
-<div id="question1">
-<h1>❤️ Est-ce que tu boudes ? ❤️</h1>
 
-<button onclick="suite1()">Non ❤️</button>
+<div id="question1">
+
+
+<h1>
+❤️ Est-ce que tu boudes ? ❤️
+</h1>
+
+
+<button onclick="suite1()">
+Non ❤️
+</button>
+
+
 </div>
+
+
+
 
 <div id="question2">
-<h1>🥰 Est-ce que tu m'aimes ? 🥰</h1>
 
-<button onclick="suite2()">Oui, pour toujours ❤️</button>
+
+<h1>
+🥰 Est-ce que tu m'aimes ? 🥰
+</h1>
+
+
+<button onclick="suite2()">
+Oui, pour toujours ❤️
+</button>
+
+
 </div>
+
+
+
+
 
 <div id="fin">
 
-<h1>💖 Je t'aime plus que tout mon cœur 💖</h1>
 
-<p style="font-size:22px;line-height:1.8;margin-top:20px;max-width:700px;margin:auto;">
+<h1>
+💖 Je t'aime plus que tout mon cœur 💖
+</h1>
 
-Je sais que j’ai fait des erreurs.<br><br>
 
-Je t’aime et je t’aimerai toujours.<br><br>
 
-Sache que tu es la plus belle chose dans ma vie ! ❤️<br><br>
+<p style="
+font-size:22px;
+line-height:1.8;
+margin-top:20px;
+">
 
-Je te demande de rester dans ma vie, tu es tout pour moi !<br><br>
 
-Je pense fort à toi ! 💕<br><br>
+Je sais que j’ai fait des erreurs. ❤️
+<br><br>
+
+Je t’aime et je t’aimerai toujours.
+<br><br>
+
+Sache que tu es la plus belle chose dans ma vie ! ❤️
+<br><br>
+
+Je te demande de rester dans ma vie, tu es tout pour moi.
+<br><br>
+
+Je pense fort à toi ! 💕
+<br><br>
 
 Je t’aime énormément et j’espère qu’on continuera à écrire notre histoire ensemble. ❤️
 
+
 </p>
 
-<br><br>
 
-<h2 style="font-size:30px;">
+
+<br>
+
+
+<h2>
 ❤️ Signé : Ton mari ❤️
 </h2>
 
-</div>
-
-<h1>😘 Je t'aimerai toujours 😘</h1>
 
 </div>
 
-</div>
+
+<h1 style="margin-top:25px;">
+😘 Je t'aimerai toujours 😘
+</h1>
+
 
 </div>
+
+
+</div>
+
+
 
 <script>
 
+
 function pluieCoeurs(){
+
 
 for(let i=0;i<40;i++){
 
+
 let coeur=document.createElement("div");
+
 
 coeur.innerHTML="❤️";
 
+
 coeur.className="heart";
+
 
 coeur.style.left=Math.random()*100+"vw";
 
+
 coeur.style.fontSize=(20+Math.random()*30)+"px";
+
 
 coeur.style.animationDuration=(2+Math.random()*3)+"s";
 
+
 document.body.appendChild(coeur);
 
-setTimeout(()=>coeur.remove(),5000);
+
+
+setTimeout(()=>{
+
+
+coeur.remove();
+
+
+},5000);
+
+
 
 }
 
+
 }
+
+
 
 function suite1(){
 
+
 pluieCoeurs();
+
 
 document.getElementById("question1").style.display="none";
 
+
 document.getElementById("question2").style.display="block";
 
+
 }
+
+
+
 
 function suite2(){
 
+
 pluieCoeurs();
+
 
 setInterval(pluieCoeurs,1500);
 
+
+
 document.getElementById("question2").style.display="none";
+
 
 document.getElementById("fin").style.display="block";
 
+
 }
+
+
 
 </script>
 
+
 </body>
+
 </html>
