@@ -8,7 +8,6 @@
 
 <title>❤️ Pour Mon Amour ❤️</title>
 
-
 <style>
 
 *{
@@ -31,7 +30,9 @@ body{
 
     align-items:center;
 
-    overflow:hidden;
+    overflow-x:hidden;
+
+    padding:20px;
 
 }
 
@@ -39,9 +40,9 @@ body{
 
 .container{
 
-    width:90%;
+    width:100%;
 
-    max-width:800px;
+    max-width:500px;
 
     text-align:center;
 
@@ -68,17 +69,17 @@ body{
 
 .photos img{
 
-    width:130px;
+    width:180px;
 
-    height:130px;
+    height:180px;
 
     object-fit:cover;
 
     border-radius:50%;
 
-    border:5px solid white;
+    border:6px solid white;
 
-    box-shadow:0 0 25px rgba(255,255,255,.8);
+    box-shadow:0 0 30px rgba(255,255,255,.9);
 
 }
 
@@ -88,13 +89,13 @@ body{
 
 .card{
 
-    background:rgba(255,255,255,.15);
+    background:rgba(255,255,255,.18);
 
-    padding:35px;
+    padding:25px 20px;
 
     border-radius:25px;
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
 
     box-shadow:0 0 30px rgba(0,0,0,.2);
 
@@ -104,19 +105,31 @@ body{
 
 h1{
 
-    margin-bottom:25px;
+    font-size:25px;
 
-    font-size:30px;
+    line-height:1.4;
+
+    margin-bottom:25px;
 
 }
 
 
 
+h2{
+
+    font-size:25px;
+
+}
+
+
+
+/* BOUTONS */
+
 button{
 
-    padding:15px 45px;
+    padding:15px 35px;
 
-    font-size:20px;
+    font-size:18px;
 
     border:none;
 
@@ -130,21 +143,21 @@ button{
 
     font-weight:bold;
 
-    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
 
 }
 
 
 
-button:hover{
+button:active{
 
-    transform:scale(1.1);
+    transform:scale(.95);
 
 }
 
 
 
-/* ETAPES */
+/* CACHER LES ETAPES */
 
 #question2,#fin{
 
@@ -154,11 +167,25 @@ button:hover{
 
 
 
+/* MESSAGE FINAL */
+
+.message{
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin-top:15px;
+
+}
+
+
+
 /* PHOTO DU BAS */
 
 .photo-fin{
 
-    margin-top:35px;
+    margin-top:30px;
 
     display:flex;
 
@@ -170,9 +197,9 @@ button:hover{
 
 .photo-fin img{
 
-    width:150px;
+    width:130px;
 
-    height:150px;
+    height:130px;
 
     object-fit:cover;
 
@@ -206,77 +233,60 @@ button:hover{
 
 @keyframes fall{
 
-    from{
 
-        transform:translateY(-50px);
+from{
 
-        opacity:1;
+    transform:translateY(-50px);
 
-    }
+    opacity:1;
+
+}
 
 
-    to{
+to{
 
-        transform:translateY(110vh);
+    transform:translateY(110vh);
 
-        opacity:0;
+    opacity:0;
 
-    }
+}
+
 
 }
 
 
 
-/* TELEPHONE */
+/* OPTIMISATION PETITS TELEPHONES */
 
-@media(max-width:600px){
-
-
-    .photos img{
-
-        width:100px;
-
-        height:100px;
-
-    }
+@media(max-width:380px){
 
 
-    .photo-fin img{
+.photos img{
 
-        width:120px;
+    width:150px;
 
-        height:120px;
-
-    }
-
-
-    .card{
-
-        padding:25px;
-
-    }
-
-
-    h1{
-
-        font-size:24px;
-
-    }
-
-
-    button{
-
-        font-size:17px;
-
-        padding:12px 35px;
-
-    }
+    height:150px;
 
 }
 
+
+h1{
+
+    font-size:22px;
+
+}
+
+
+.card{
+
+    padding:20px 15px;
+
+}
+
+
+}
 
 </style>
-
 
 </head>
 
@@ -284,19 +294,16 @@ button:hover{
 <body>
 
 
-
 <div class="container">
 
 
-
-<!-- PHOTO DU HAUT -->
+<!-- PHOTO DE VOUS -->
 
 <div class="photos">
 
 <img src="photo1.jpg" alt="Nous">
 
 </div>
-
 
 
 
@@ -313,9 +320,7 @@ button:hover{
 
 
 <button onclick="suite1()">
-
 Non ❤️
-
 </button>
 
 
@@ -334,9 +339,7 @@ Non ❤️
 
 
 <button onclick="suite2()">
-
 Oui, pour toujours ❤️
-
 </button>
 
 
@@ -347,25 +350,16 @@ Oui, pour toujours ❤️
 
 
 
-
 <div id="fin">
 
 
-
 <h1>
-
 💖 Je t'aime plus que tout mon cœur 💖
-
 </h1>
 
 
 
-
-<p style="
-font-size:22px;
-line-height:1.8;
-margin-top:20px;
-">
+<p class="message">
 
 
 Je sais que j’ai fait des erreurs. ❤️
@@ -395,9 +389,6 @@ Je t’aime énormément et j’espère qu’on continuera à écrire notre hist
 
 
 
-
-<!-- PHOTO DU BAS -->
-
 <div class="photo-fin">
 
 <img src="photo2.jpg" alt="Nous">
@@ -410,11 +401,8 @@ Je t’aime énormément et j’espère qu’on continuera à écrire notre hist
 
 
 <h2>
-
 ❤️ Signé : Ton mari ❤️
-
 </h2>
-
 
 
 </div>
@@ -422,13 +410,9 @@ Je t’aime énormément et j’espère qu’on continuera à écrire notre hist
 
 
 
-
 <h1 style="margin-top:25px;">
-
 😘 Je t'aimerai toujours 😘
-
 </h1>
-
 
 
 
@@ -443,11 +427,10 @@ Je t’aime énormément et j’espère qu’on continuera à écrire notre hist
 <script>
 
 
-
 function pluieCoeurs(){
 
 
-for(let i=0;i<40;i++){
+for(let i=0;i<50;i++){
 
 
 let coeur=document.createElement("div");
@@ -462,7 +445,7 @@ coeur.className="heart";
 coeur.style.left=Math.random()*100+"vw";
 
 
-coeur.style.fontSize=(20+Math.random()*30)+"px";
+coeur.style.fontSize=(20+Math.random()*25)+"px";
 
 
 coeur.style.animationDuration=(2+Math.random()*3)+"s";
@@ -479,12 +462,10 @@ coeur.remove();
 },5000);
 
 
-
 }
 
 
 }
-
 
 
 
@@ -501,8 +482,6 @@ document.getElementById("question2").style.display="block";
 
 
 }
-
-
 
 
 
@@ -524,9 +503,7 @@ document.getElementById("fin").style.display="block";
 }
 
 
-
 </script>
-
 
 
 </body>
