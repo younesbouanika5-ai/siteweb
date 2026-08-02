@@ -1,293 +1,186 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pour ma femme ❤️</title>
+<title>❤️ Pour Mon Amour ❤️</title>
 
 <style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+body{
+    background:linear-gradient(135deg,#ff4d6d,#ff9a9e);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 }
 
-.container {
-    background: white;
-    width: 90%;
-    max-width: 500px;
-    padding: 30px;
-    border-radius: 25px;
-    text-align: center;
-    box-shadow: 0 0 30px rgba(0,0,0,0.2);
-    z-index: 2;
+.container{
+    text-align:center;
+    color:white;
 }
 
-h1 {
-    color: #ff4d6d;
-    margin-bottom: 20px;
+.photos{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:25px;
 }
 
-p {
-    font-size: 20px;
-    margin: 20px;
+.photos img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid white;
+    box-shadow:0 0 20px rgba(255,255,255,.6);
 }
 
-.photos {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
+.card{
+    background:rgba(255,255,255,.15);
+    padding:35px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
 }
 
-.photos img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #ff4d6d;
+h1{
+    margin-bottom:20px;
 }
 
-
-button {
-    background: #ff4d6d;
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 50px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+button{
+    padding:15px 40px;
+    font-size:20px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:white;
+    color:#ff2d55;
+    font-weight:bold;
+    transition:.3s;
 }
 
-button:hover {
-    transform: scale(1.1);
-    background:#ff1744;
+button:hover{
+    transform:scale(1.1);
 }
 
-
-.hidden {
+#question2,#fin{
     display:none;
 }
 
-
-/* Coeurs */
-
-.heart {
-    position:absolute;
-    color:#ff1744;
+.heart{
+    position:fixed;
     font-size:25px;
-    animation: float 4s linear forwards;
+    animation:fall 4s linear forwards;
+    pointer-events:none;
 }
 
-
-@keyframes float {
-
-0% {
-    transform:translateY(0) scale(1);
-    opacity:1;
+@keyframes fall{
+    from{
+        transform:translateY(-50px);
+        opacity:1;
+    }
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
 }
-
-100% {
-    transform:translateY(-800px) scale(2);
-    opacity:0;
-}
-
-}
-
-
 </style>
-
 </head>
-
 
 <body>
 
-
 <div class="container">
 
-
-<div id="page1">
-
-<h1>❤️ Mon amour ❤️</h1>
-
-
 <div class="photos">
+<img src="photo1.jpg" alt="Nous">
+<img src="photo2.jpg" alt="Nous">
+</div>
 
-<img src="images/photo1.jpg">
+<div class="card">
 
-<img src="images/photo2.jpg">
+<div id="question1">
+<h1>❤️ Est-ce que tu boudes ? ❤️</h1>
+
+<button onclick="suite1()">Non ❤️</button>
+</div>
+
+<div id="question2">
+<h1>🥰 Est-ce que tu m'aimes ? 🥰</h1>
+
+<button onclick="suite2()">Oui, pour toujours ❤️</button>
+</div>
+
+<div id="fin">
+<h1>💖 Je t'aime plus que tout mon cœur 💖</h1>
+
+<h2>Merci d'être la plus belle chose de ma vie ❤️</h2>
+
+<br>
+
+<h1>😘 Je t'aimerai toujours 😘</h1>
 
 </div>
 
-
-<p>
-Est-ce que tu boudes ? 🥺
-</p>
-
-
-<button onclick="non()">
-Non ❤️
-</button>
-
-
 </div>
 
-
-
-
-<div id="page2" class="hidden">
-
-
-<h1>🥰 Je savais ❤️</h1>
-
-
-<p>
-Merci mon amour ❤️
-</p>
-
-
-<p>
-Est-ce que tu m'aimes ? 😘
-</p>
-
-
-<button onclick="oui()">
-Oui ❤️
-</button>
-
-
 </div>
-
-
-
-
-<div id="page3" class="hidden">
-
-
-<h1>
-Je t'aime aussi ❤️
-</h1>
-
-
-<p>
-Tu es la plus belle chose qui me soit arrivée 💕
-</p>
-
-
-<div class="photos">
-
-<img src="images/photo1.jpg">
-
-<img src="images/photo2.jpg">
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
 
 <script>
 
+function pluieCoeurs(){
 
-function createHeart(){
+for(let i=0;i<40;i++){
 
-let heart=document.createElement("div");
+let coeur=document.createElement("div");
 
-heart.className="heart";
+coeur.innerHTML="❤️";
 
-heart.innerHTML="❤️";
+coeur.className="heart";
 
+coeur.style.left=Math.random()*100+"vw";
 
-heart.style.left=Math.random()*100+"vw";
+coeur.style.fontSize=(20+Math.random()*30)+"px";
 
-heart.style.bottom="0px";
+coeur.style.animationDuration=(2+Math.random()*3)+"s";
 
-heart.style.fontSize=(20+Math.random()*40)+"px";
+document.body.appendChild(coeur);
 
-
-document.body.appendChild(heart);
-
-
-setTimeout(()=>{
-
-heart.remove();
-
-},4000);
-
+setTimeout(()=>coeur.remove(),5000);
 
 }
 
+}
 
+function suite1(){
 
-function non(){
+pluieCoeurs();
 
+document.getElementById("question1").style.display="none";
 
-for(let i=0;i<50;i++){
-
-setTimeout(createHeart,i*50);
+document.getElementById("question2").style.display="block";
 
 }
 
+function suite2(){
 
-setTimeout(()=>{
+pluieCoeurs();
 
+setInterval(pluieCoeurs,1500);
 
-document.getElementById("page1").classList.add("hidden");
+document.getElementById("question2").style.display="none";
 
-document.getElementById("page2").classList.remove("hidden");
-
-
-},1500);
-
-
+document.getElementById("fin").style.display="block";
 
 }
-
-
-
-
-function oui(){
-
-
-for(let i=0;i<100;i++){
-
-setTimeout(createHeart,i*30);
-
-}
-
-
-
-document.getElementById("page2").classList.add("hidden");
-
-document.getElementById("page3").classList.remove("hidden");
-
-}
-
 
 </script>
 
-
-
 </body>
 </html>
-```
